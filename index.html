@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>knob demo</title>
+	<link rel="stylesheet" href="knob.css">
+</head>
+<body>
+	<div id="controls">
+		<img src="http://www.fillmurray.com/250/400" alt="Bill Murray">
+		<div>
+			<label class="knob">
+				<span class="label">Intensity</span>
+				<svg id="dial" class="dial" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="77.061px" height="77.061px" viewBox="0 0 77.061 77.061" enable-background="new 0 0 77.061 77.061" xml:space="preserve">
+				<circle fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" cx="38.531" cy="38.53" r="35.03"/>
+				<line fill="none" stroke="#000000" stroke-width="7" stroke-miterlimit="10" x1="38.531" y1="73.56" x2="38.531" y2="38.529"/>
+				</svg>
+				<input type="number" min="0" max="100" value="50">
+			</label>
+		</div>
+		<!-- to repeat the graphic -->
+		<!-- <svg>
+			<use xlink:href="#dial" width="80" height="80"></use>
+		</svg> -->
+	</div>
+	<script src="knob.js"></script>
+	<script>
+		var knobElem = document.querySelector('.knob');
+		var myKnob = new Knob(knobElem, 0.01);
+	</script>
+</body>
+</html>
